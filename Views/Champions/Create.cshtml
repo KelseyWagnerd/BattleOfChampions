@@ -1,4 +1,4 @@
-﻿@model BattleOfChampions.Models.Champion
+﻿@model BattleOfChampions.dto.CreateChampionDTO
 
 @{
     ViewData["Title"] = "Create";
@@ -42,13 +42,21 @@
                 <input asp-for="Health" class="form-control" />
                 <span asp-validation-for="Health" class="text-danger"></span>
             </div>
+<div></div>
+        <div class="form-group">
+                <select class="form-control" asp-for="EquipmentId" required
+                        asp-items="@ViewBag.Equipments">
+                    <option value="">-- Select Equipment --</option>
+                </select>
+    </div>
+
+
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
-</div>
-
+   </div> 
 <div>
     <a asp-action="Index">Back to List</a>
 </div>

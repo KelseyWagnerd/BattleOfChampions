@@ -10,6 +10,15 @@ namespace BattleOfChampions.Data
             : base(options)
         {
         }
-        public DbSet<BattleOfChampions.Models.Champion> Champion { get; set; } = default!;
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            foreach(var relationship in builder.Model.GetEntityTypes().SelectMany(f => f.GetReferencingForeignKeys()))
+            {
+                relationship.DeleteBehavior = DeleteBehavior.Restrict;
+            }
+            base.OnModelCreating(builder);
+        }
+        public DbSet<BattleOfChampions.Models.Champion> Champion { get; set; }
+        public DbSet<BattleOfChampions.Models.Equipment> Equipment { get; set; }
     }
 }

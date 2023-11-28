@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
 
-namespace BattleOfChampions.Data.Migrations
+namespace BattleOfChampions.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
     partial class ApplicationDbContextModelSnapshot : ModelSnapshot
@@ -38,6 +38,9 @@ namespace BattleOfChampions.Data.Migrations
                     b.Property<int>("Defense")
                         .HasColumnType("int");
 
+                    b.Property<Guid?>("EquipmentID")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<int>("Health")
                         .HasColumnType("int");
 
@@ -50,7 +53,36 @@ namespace BattleOfChampions.Data.Migrations
 
                     b.HasKey("ChampionID");
 
+                    b.HasIndex("EquipmentID");
+
                     b.ToTable("Champion");
+                });
+
+            modelBuilder.Entity("BattleOfChampions.Models.Equipment", b =>
+                {
+                    b.Property<Guid>("EquipmentID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<int>("AttackModifier")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DefenseModifier")
+                        .HasColumnType("int");
+
+                    b.Property<int>("HealthModifier")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SpeedModifier")
+                        .HasColumnType("int");
+
+                    b.HasKey("EquipmentID");
+
+                    b.ToTable("Equipment");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -253,6 +285,16 @@ namespace BattleOfChampions.Data.Migrations
                     b.HasKey("UserId", "LoginProvider", "Name");
 
                     b.ToTable("AspNetUserTokens", (string)null);
+                });
+
+            modelBuilder.Entity("BattleOfChampions.Models.Champion", b =>
+                {
+                    b.HasOne("BattleOfChampions.Models.Equipment", "Equipment")
+                        .WithMany()
+                        .HasForeignKey("EquipmentID")
+                        .OnDelete(DeleteBehavior.Restrict);
+
+                    b.Navigation("Equipment");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>

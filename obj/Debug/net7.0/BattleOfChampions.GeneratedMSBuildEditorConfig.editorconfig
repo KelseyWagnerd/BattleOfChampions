@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Kelsey/source/repos/BattleOfChampions/Views/Champions/Battle.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbXBpb25zXEJhdHRsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Kelsey/source/repos/BattleOfChampions/Views/Champions/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbXBpb25zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -42,6 +46,26 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Kelsey/source/repos/BattleOfChampions/Views/Champions/ShowSearchForm.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhbXBpb25zXFNob3dTZWFyY2hGb3JtLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kelsey/source/repos/BattleOfChampions/Views/Equipment/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBtZW50XENyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kelsey/source/repos/BattleOfChampions/Views/Equipment/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBtZW50XERlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kelsey/source/repos/BattleOfChampions/Views/Equipment/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBtZW50XERldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kelsey/source/repos/BattleOfChampions/Views/Equipment/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBtZW50XEVkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Kelsey/source/repos/BattleOfChampions/Views/Equipment/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBtZW50XEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Kelsey/source/repos/BattleOfChampions/Views/Home/Index.cshtml]

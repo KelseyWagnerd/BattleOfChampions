@@ -1,4 +1,7 @@
+using BattleOfChampions.AbstractClasses;
 using BattleOfChampions.Data;
+using BattleOfChampions.Infrastructure;
+using BattleOfChampions.Logic;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,7 +22,9 @@ namespace BattleOfChampions
             builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             builder.Services.AddControllersWithViews();
-
+            builder.Services.AddScoped(typeof(IEquipmentLogic), typeof(EquipmentLogic));
+            builder.Services.AddScoped(typeof(IChampionLogic), typeof(ChampionLogic));
+            builder.Services.AddScoped(typeof(Utilities));
             var app = builder.Build();
 
             // Configure the HTTP request pipeline.

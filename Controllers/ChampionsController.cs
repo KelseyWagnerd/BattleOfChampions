@@ -8,25 +8,34 @@ using Microsoft.EntityFrameworkCore;
 using BattleOfChampions.Data;
 using BattleOfChampions.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.IdentityModel.Tokens;
+using BattleOfChampions.Infrastructure;
+using BattleOfChampions.dto;
+using BattleOfChampions.AbstractClasses;
 
 namespace BattleOfChampions.Controllers
 {
     public class ChampionsController : Controller
     {
         private readonly ApplicationDbContext _context;
-
-        public ChampionsController(ApplicationDbContext context)
+        Utilities _utilities;
+        private readonly IChampionLogic _championLogic;
+        public ChampionsController(ApplicationDbContext context,Utilities utility,IChampionLogic championLogic)
         {
             _context = context;
+            _utilities= utility;
+            _championLogic=championLogic;
         }
 
         // GET: Champions
         public async Task<IActionResult> Index()
         {
+            var champions=await _championLogic.GetChampions();
               return _context.Champion != null ? 
-                          View(await _context.Champion.ToListAsync()) :
+                          View(champions) :
                           Problem("Entity set 'ApplicationDbContext.Champion'  is null.");
         }
+  
 
         // GET: Champions/ShowSearchForm
         public async Task<IActionResult> ShowSearchForm()
@@ -46,7 +55,15 @@ namespace BattleOfChampions.Controllers
                         Problem("Entity set 'ApplicationDbContext.Champion'  is null.");
         }
 
-        // GET: Champions/Details/5
+        // GET: Champions/Battle
+        public async Task<IActionResult> Battle()
+        {
+            return _context.Champion != null ?
+                        View() :
+                        Problem("Entity set 'ApplicationDbContext.Champion'  is null.");
+        }
+
+        // GET: Champions/Details/
         public async Task<IActionResult> Details(Guid? id)
         {
             if (id == null || _context.Champion == null)
@@ -66,8 +83,9 @@ namespace BattleOfChampions.Controllers
 
         // GET: Champions/Create
         [Authorize]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
+            ViewBag.Equipments = await _utilities.GetEquipmentSL();
             return View();
         }
 
@@ -77,12 +95,25 @@ namespace BattleOfChampions.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ChampionID,Name,Bio,Attack,Defense,Speed,Health")] Champion champion)
+        // Note for later: Mess with this method to get equipment assigned, add to bind list?????
+        public async Task<IActionResult> Create(CreateChampionDTO model)
         {
+            ViewBag.Equipments = await _utilities.GetEquipmentSL();
+            Champion champion = new Champion();
             if (ModelState.IsValid)
             {
+                champion = new Champion()
+                {
+                    Attack = model.Attack,
+                    Defense = model.Defense,
+                    Speed = model.Speed,
+                    Health = model.Health,
+                    EquipmentID = Guid.Parse(model.EquipmentId),
+                    Name = model.Name,
+                    Bio = model.Bio
+                };
                 champion.ChampionID = Guid.NewGuid();
-                _context.Add(champion);
+                _context.Champion.Add(champion);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -112,6 +143,7 @@ namespace BattleOfChampions.Controllers
         [Authorize]
         [HttpPost]
         [ValidateAntiForgeryToken]
+        // Note for later: Same thing here, add bind for Equipment
         public async Task<IActionResult> Edit(Guid id, [Bind("ChampionID,Name,Bio,Attack,Defense,Speed,Health")] Champion champion)
         {
             if (id != champion.ChampionID)
@@ -187,5 +219,7 @@ namespace BattleOfChampions.Controllers
         {
           return (_context.Champion?.Any(e => e.ChampionID == id)).GetValueOrDefault();
         }
+
+
     }
 }
