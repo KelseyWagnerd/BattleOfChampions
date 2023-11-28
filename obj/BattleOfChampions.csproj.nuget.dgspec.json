@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampions\\BattleOfChampions.csproj": {}
+    "C:\\Users\\Kelsey\\Source\\Repos\\BattleOfChampionsTesting\\BattleOfChampions.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampions\\BattleOfChampions.csproj": {
+    "C:\\Users\\Kelsey\\Source\\Repos\\BattleOfChampionsTesting\\BattleOfChampions.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampions\\BattleOfChampions.csproj",
+        "projectUniqueName": "C:\\Users\\Kelsey\\Source\\Repos\\BattleOfChampionsTesting\\BattleOfChampions.csproj",
         "projectName": "BattleOfChampions",
-        "projectPath": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampions\\BattleOfChampions.csproj",
+        "projectPath": "C:\\Users\\Kelsey\\Source\\Repos\\BattleOfChampionsTesting\\BattleOfChampions.csproj",
         "packagesPath": "C:\\Users\\Kelsey\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampions\\obj\\",
+        "outputPath": "C:\\Users\\Kelsey\\Source\\Repos\\BattleOfChampionsTesting\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Kelsey\\AppData\\Roaming\\NuGet\\NuGet.Config",

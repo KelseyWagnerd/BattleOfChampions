@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+3Wm7q/NZaJ6uW53QzyNRtXOCIzwzKJNqICSSXMNNaolLUwuztcmI09TNvcef5m+TQTohOCFIFUfnTGmkJXhug==",
+  "dgSpecHash": "OlQ46dm0aQC3lBSb2dx/QFvA94ECsrJQtzGTy2iRkO8N14AuTPEYVYJN4CH2rUrY/nlqXMFbzwwo3h1Vj06k/g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampions\\BattleOfChampions.csproj",
+  "projectFilePath": "C:\\Users\\Kelsey\\Source\\Repos\\BattleOfChampionsTesting\\BattleOfChampions.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Kelsey\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\Kelsey\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",

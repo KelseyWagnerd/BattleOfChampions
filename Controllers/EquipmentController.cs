@@ -7,23 +7,30 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using BattleOfChampions.Data;
 using BattleOfChampions.Models;
+using BattleOfChampions.AbstractClasses;
+using BattleOfChampions.Infrastructure;
 
 namespace BattleOfChampions.Controllers
 {
     public class EquipmentController : Controller
     {
         private readonly ApplicationDbContext _context;
+		Utilities _utilities;
+		private readonly IEquipmentLogic _equipmentLogic;
 
-        public EquipmentController(ApplicationDbContext context)
+		public EquipmentController(ApplicationDbContext context, Utilities utility, IEquipmentLogic equipmentLogic)
         {
             _context = context;
+            _utilities = utility;
+            _equipmentLogic = equipmentLogic;
         }
 
         // GET: Equipment
         public async Task<IActionResult> Index()
         {
+            var equipments = await _equipmentLogic.getEquipmentList();
               return _context.Equipment != null ? 
-                          View(await _context.Equipment.ToListAsync()) :
+                          View(equipments) :
                           Problem("Entity set 'ApplicationDbContext.Equipment'  is null.");
         }
 
