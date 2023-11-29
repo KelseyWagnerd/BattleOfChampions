@@ -43,7 +43,7 @@ This project uses the following features from the Capstone Requirements List:
 3. Make a generic class and use it.
 	* The Create and Edit methods are both generic-- they are used in both the Champion and Equipment classes and there are versions of these methods that take different parameters for initially Creating vs Editing an object.
 
-4.Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program.
+4. Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program.
 	* In order to make a drop-down list of available Equipment, I created a dictionary of type IEnumerable for all Equipment names and populated the drop-down with each value in the list using Razor Page's ViewBag. 
 
     
