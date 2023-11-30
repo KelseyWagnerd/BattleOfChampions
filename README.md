@@ -52,7 +52,7 @@ This project uses the following features from the Capstone Requirements List:
 ## HOW TO CREATE EQUIPMENT:
 
 1. Give your Equipment a Name. You can go back and change this later.
-2. Assign it some Modifier Points, which will eventually add onto a Champion's base stats. (These will be restricted later but for now go crazy.) Here's how the skills translate to gameplay:
+2. Assign it some Modifier Points, which will eventually add onto a Champion's base stats. (These will be restricted later but for now go crazy.) Here's how the skills will translate to gameplay (no gameplay functionality yet):
 	* ATTACK: This is how hard your character can hit. Attack correlates to how much damage an item can do to their opponent.
  	* DEFENSE: This is how resistant your character is to taking damage. High defense items prevent more damage than those with low defense.
   	* SPEED: This is how quickly your character moves. Speed determines who goes first, which can turn the tide of the match. Speed boosting items also give a small chance to dodge an attack and take no damage.
@@ -61,14 +61,17 @@ This project uses the following features from the Capstone Requirements List:
 
   --------------------------------------
   ## HOW TO CREATE CHAMPIONS
-
-1. Give your Champion a Name and brief description for their Bio. You can go back and change this later.
-2. Assign them some Skill Points. (These will be restricted later but for now go crazy.) Here's how the skills translate to gameplay:
+1. You must register for an account to create Champions!  Just follow the prompts.
+   	* You can use a fake email address. Email validation hasn't been set up yet. Password validation has so make sure to follow the password rules!
+   	* After registering, click the link that says "Confirm email." (It doesn't really email you lol)
+   	* Then click "Login" in the nav menu and log in using that same email address and password.
+3. Give your Champion a Name and brief description for their Bio. You can go back and change this later.
+4. Assign them some Skill Points. (These will be restricted later but for now go crazy.) Here's how the skills translate to gameplay (no gameplay functionality yet):
 	* ATTACK: This is how hard your character can hit. Attack correlates to how much damage they do to their opponent.
 	* DEFENSE: This is how resistant your character is to taking damage. High defense characters take lower damage than those with low defense.
 	* SPEED: This is how quickly your character moves. Speed determines who goes first, which can turn the tide of the match. Speed also gives a small chance to dodge an attack and take no damage.
 	* HEALTH: These are your character's Hit Points. When HP reaches 0, that character loses and the other is declared the winner.
- 3. Select a piece of Equipment from the drop-down menu. Remember, Equipment needs to be added first before it can be assigned.
+ 5. Select a piece of Equipment from the drop-down menu. Remember, Equipment needs to be added first before it can be assigned.
   	* Once a piece of Equipment is assigned, you can't change it!
 
     
