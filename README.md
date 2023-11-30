@@ -46,4 +46,53 @@ This project uses the following features from the Capstone Requirements List:
 4. Create a dictionary or list, populate it with several values, retrieve at least one value, and use it in your program.
 	* In order to make a drop-down list of available Equipment, I created a dictionary of type IEnumerable for all Equipment names and populated the drop-down with each value in the list using Razor Page's ViewBag. 
 
+--------------------------------------------
+## HOW TO CREATE EQUIPMENT:
+
+    <ol>
+        <li> Give your Equipment a Name. You can go back and change this later.</li>
+        <li>
+            Assign it some Modifier Points, which will eventually add onto a Champion's base stats. (These will be restricted later but for now go crazy.) Here's how the skills translate to gameplay:
+            <ul>
+                <li>
+                    ATTACK: This is how hard your character can hit. Attack correlates to how much damage an item can do to their opponent.
+                </li>
+                <li>
+                    DEFENSE: This is how resistant your character is to taking damage. High defense items prevent more damage than those with low defense.
+                </li>
+                <li>
+                    SPEED: This is how quickly your character moves. Speed determines who goes first, which can turn the tide of the match. Speed boosting items also give a small chance to dodge an attack and take no damage.
+                </li>
+                <li>HEALTH: These are your character's Hit Points. Health items increase a Champion's starting HP. When HP reaches 0, that character loses and the other is declared the winner.</li>
+            </ul>
+        </li>
+        <li>
+             Remember, Equipment needs to be added to this database first before it can be assigned to a Champion.
+            Once a piece of Equipment is assigned, you can't change their assignment, but you can change the Equipment's name and stats.
+        </li>
+    </ol>
+
+  --------------------------------------
+  ## HOW TO CREATE CHAMPIONS
+
+      <ol>
+  <li> Give your Champion a Name and brief description for their Bio. You can go back and change this later.</li>
+  <li> Assign them some Skill Points. (These will be restricted later but for now go crazy.) Here's how the skills translate to gameplay:
+  <ul>
+      <li> 
+          ATTACK: This is how hard your character can hit. Attack correlates to how much damage they do to their opponent.
+      </li>
+      <li>
+          DEFENSE: This is how resistant your character is to taking damage. High defense characters take lower damage than those with low defense.
+      </li>
+      <li>
+          SPEED: This is how quickly your character moves. Speed determines who goes first, which can turn the tide of the match. Speed also gives a small chance to dodge an attack and take no damage.
+      </li>
+      <li>HEALTH: These are your character's Hit Points. When HP reaches 0, that character loses and the other is declared the winner.</li>
+  </ul>  </li>
+  <li> Select a piece of Equipment from the drop-down menu. Remember, Equipment needs to be added first before it can be assigned.
+      Once a piece of Equipment is assigned, you can't change it!
+  </li>
+  </ol>
+
     
