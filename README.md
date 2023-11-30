@@ -16,17 +16,20 @@ A .NET Model View Controller project built using Razor Pages
 
 1. Pull the code off GitHub and open it in Visual Studio
 
-2. Run the app. When the homepage opens in a browser, click 
+2. (Optional) Install the font "Press Start 2P" from Google Fonts.
+ https://fonts.google.com/specimen/Press+Start+2P
+
+4. Run the app. When the homepage opens in a browser, click 
    "Champions" or "Equipment" to trigger the database migration
    screen
 
-3. When the screen appears, follow the prompt by doing one of the three following things...
+5. When the screen appears, follow the prompt by doing one of the three following things...
       1. Clicking the "Apply Migration" button
       2. Entering the command "update-database" in the Package Manager console in VS
       3. Entering the command "dotnet ef database update" in Command Prompt
     
-4. Refresh the page, and start by adding a few pieces of Equipment to the database!
-* (You can only assign Equipment when you are initially creating a Champion, not on the Edit screen.)
+6. Refresh the page, and start by adding a few pieces of Equipment to the database!
+
 
 ---------------------------------------------
 ## FEATURES:
