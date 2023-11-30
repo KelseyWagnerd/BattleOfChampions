@@ -5,42 +5,6 @@
       "PackagePath": "staticwebassets\\BattleOfChampions.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\OIG.jpg",
-      "PackagePath": "staticwebassets\\OIG.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\assets\\OIG.jpg",
-      "PackagePath": "staticwebassets\\assets\\OIG.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\assets\\characterwall.jpg",
-      "PackagePath": "staticwebassets\\assets\\characterwall.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\assets\\hero.jpg",
-      "PackagePath": "staticwebassets\\assets\\hero.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\assets\\herotext.jpg",
-      "PackagePath": "staticwebassets\\assets\\herotext.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\assets\\logo.jpg",
-      "PackagePath": "staticwebassets\\assets\\logo.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\assets\\logo2.jpg",
-      "PackagePath": "staticwebassets\\assets\\logo2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\assets\\sunset.jpg",
-      "PackagePath": "staticwebassets\\assets\\sunset.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\characterwall.jpg",
-      "PackagePath": "staticwebassets\\characterwall.jpg"
-    },
-    {
       "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
@@ -51,10 +15,6 @@
     {
       "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\hero.jpg",
       "PackagePath": "staticwebassets\\hero.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\herotext.jpg",
-      "PackagePath": "staticwebassets\\herotext.jpg"
     },
     {
       "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\js\\site.js",
@@ -289,16 +249,8 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
-      "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\logo.jpg",
-      "PackagePath": "staticwebassets\\logo.jpg"
-    },
-    {
       "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\logo2.jpg",
       "PackagePath": "staticwebassets\\logo2.jpg"
-    },
-    {
-      "Id": "C:\\Users\\Kelsey\\source\\repos\\BattleOfChampionsTesting\\wwwroot\\sunset.jpg",
-      "PackagePath": "staticwebassets\\sunset.jpg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.BattleOfChampions.Microsoft.AspNetCore.StaticWebAssets.props",

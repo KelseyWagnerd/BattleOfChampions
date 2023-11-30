@@ -1,3 +1,5 @@
+
+
 html {
     font-size: 14px;
     position: relative;
@@ -55,7 +57,7 @@ body {
     }
 
 .retro-static {
-    font-family: 'Press Start 2P', cursive;
+    font-family: monospace, cursive;
     font-size: 22px;
     color: #00ff00;
     text-shadow: 0 0 5px #00ff00;
@@ -80,6 +82,24 @@ margin-bottom: 20px;
 
 .table {
 background: linear-gradient(to left, #fbce00, #14f3e0);
+}
+
+.btn {
+    font-size: 15px;
+    width: auto;
+    height: auto;
+    border-width: 1px;
+    color: #fff;
+    border-color: #d02718;
+    font-weight: bold;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    border-bottom-left-radius: 18px;
+    border-bottom-right-radius: 18px;
+    box-shadow: 3px 4px 0px 0px #8a2a21;
+    text-shadow: 0px 1px 0px #810e05;
+    background: linear-gradient(#c62d1f, #f24437);
+    background-color: #ff002f;
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {

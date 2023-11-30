@@ -4,9 +4,29 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Create A New Champion</h1>
 
-<h4>Champion</h4>
+<p>How To Create:
+    <ol>
+  <li> Give your Champion a Name and brief description for their Bio. You can go back and change this later.</li>
+  <li> Assign them some Skill Points. (These will be restricted later but for now go crazy.) Here's how the skills translate to gameplay:
+  <ul>
+      <li> 
+          ATTACK: This is how hard your character can hit. Attack correlates to how much damage they do to their opponent.
+      </li>
+      <li>
+          DEFENSE: This is how resistant your character is to taking damage. High defense characters take lower damage than those with low defense.
+      </li>
+      <li>
+          SPEED: This is how quickly your character moves. Speed determines who goes first, which can turn the tide of the match. Speed also gives a small chance to dodge an attack and take no damage.
+      </li>
+      <li>HEALTH: These are your character's Hit Points. When HP reaches 0, that character loses and the other is declared the winner.</li>
+  </ul>  </li>
+  <li> Select a piece of Equipment from the drop-down menu. Remember, Equipment needs to be added first before it can be assigned.
+      Once a piece of Equipment is assigned, you can't change it!
+  </li>
+  </ol>
+</p>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -42,15 +62,14 @@
                 <input asp-for="Health" class="form-control" />
                 <span asp-validation-for="Health" class="text-danger"></span>
             </div>
-<div></div>
+            <p> </p>
         <div class="form-group">
                 <select class="form-control" asp-for="EquipmentId" required
                         asp-items="@ViewBag.Equipments">
                     <option value="">-- Select Equipment --</option>
-                </select>
-    </div>
+                </select> </div>
 
-
+            <p> </p>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>

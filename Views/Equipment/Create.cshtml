@@ -4,9 +4,33 @@
     ViewData["Title"] = "Create";
 }
 
-<h1>Create</h1>
+<h1>Create Equipment</h1>
 
-<h4>Equipment</h4>
+<p>
+    How To Create:
+    <ol>
+        <li> Give your Equipment a Name. You can go back and change this later.</li>
+        <li>
+            Assign it some Modifier Points, which will eventually add onto a Champion's base stats. (These will be restricted later but for now go crazy.) Here's how the skills translate to gameplay:
+            <ul>
+                <li>
+                    ATTACK: This is how hard your character can hit. Attack correlates to how much damage an item can do to their opponent.
+                </li>
+                <li>
+                    DEFENSE: This is how resistant your character is to taking damage. High defense items prevent more damage than those with low defense.
+                </li>
+                <li>
+                    SPEED: This is how quickly your character moves. Speed determines who goes first, which can turn the tide of the match. Speed boosting items also give a small chance to dodge an attack and take no damage.
+                </li>
+                <li>HEALTH: These are your character's Hit Points. Health items increase a Champion's starting HP. When HP reaches 0, that character loses and the other is declared the winner.</li>
+            </ul>
+        </li>
+        <li>
+             Remember, Equipment needs to be added to this database first before it can be assigned to a Champion.
+            Once a piece of Equipment is assigned, you can't change their assignment, but you can change the Equipment's name and stats.
+        </li>
+    </ol>
+</p>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -37,13 +61,14 @@
                 <input asp-for="HealthModifier" class="form-control" />
                 <span asp-validation-for="HealthModifier" class="text-danger"></span>
             </div>
+            <p></p>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
     </div>
 </div>
-
+<p></p>
 <div>
     <a asp-action="Index">Back to List</a>
 </div>
