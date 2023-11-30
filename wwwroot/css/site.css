@@ -1,5 +1,14 @@
 html {
-  font-size: 14px;
+    font-size: 14px;
+    position: relative;
+    min-height: 100%;
+    background-color: #110010;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #110010;
+    color: lime;
 }
 
 @media (min-width: 768px) {
@@ -8,15 +17,72 @@ html {
   }
 }
 
+.navbar-brand {
+    font-family: 'Press Start 2P';
+    font-weight: 800;
+    font-size: 16pt;
+}
+
+.navbar {
+    font-family: 'Lucida Console', sans-serif;
+    font-size: 20px;
+    color: #fff200;
+    background: linear-gradient(to right, #fbce00, #ff002f);
+    border: 10px solid transparent;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+
+
+.retro-animated {
+    font-family: 'Lucida Console', sans-serif;
+    font-size: 44px;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    border: 10px solid transparent;
+    box-shadow: 0 0 10px #00ff00;
+    transform: scale(0.8); 
+    transition: all 0.5s ease-in-out;
+}
+
+    .retro-animated:hover {
+        color: #ff0000;
+        text-shadow: 0 0 5px #ff0000;
+        background: linear-gradient(to left, #000000, #1a1a1a);
+        box-shadow: 0 0 10px #ff0000;
+        transform: scale(1);
+    }
+
+.retro-static {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 22px;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00;
+    background: linear-gradient(to right, #000000, #1a1a1a);
+    border: 10px solid transparent;
+    box-shadow: 0 0 10px #00ff00;
+}
+
+.emphasis {
+color: yellow;
+}
+
+.logo {
+    height: 500px;
+
+}
+
+.image {
+height: 400px;
+margin-bottom: 20px;
+}
+
+.table {
+background: linear-gradient(to left, #fbce00, #14f3e0);
+}
+
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
 }
 
-html {
-  position: relative;
-  min-height: 100%;
-}
-
-body {
-  margin-bottom: 60px;
-}

@@ -75,7 +75,7 @@ namespace BattleOfChampions.Controllers
             return View(equipment);
         }
 
-        // GET: Equipment/Edit/5
+        // GET: Equipment/Edit/
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null || _context.Equipment == null)
@@ -96,7 +96,7 @@ namespace BattleOfChampions.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid id, [Bind("Name,EquipmentID,attackModifier,defenseModifier,speedModifier,healthModifier")] Equipment equipment)
+        public async Task<IActionResult> Edit(Guid id, [Bind("Name,EquipmentID,AttackModifier,DefenseModifier,SpeedModifier,HealthModifier")] Equipment equipment)
         {
             if (id != equipment.EquipmentID)
             {

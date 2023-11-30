@@ -1,4 +1,9 @@
-﻿using BattleOfChampions.Models;
+﻿using BattleOfChampions.dto;
+using BattleOfChampions.Infrastructure;
+using BattleOfChampions.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace BattleOfChampions.dto
 {
@@ -6,8 +11,8 @@ namespace BattleOfChampions.dto
     {
        
             public Guid ChampionID { get; set; }
-            public string Name { get; set; }
-            public string Bio { get; set; }
+            public string ?Name { get; set; }
+            public string ?Bio { get; set; }
 
             // Base stats-- do not change these for Battles! Use separate BattleStats table!
             public int Attack { get; set; }
@@ -18,3 +23,4 @@ namespace BattleOfChampions.dto
             public string ?EquipmentId { get; set; }
     }
 }
+

@@ -43,14 +43,20 @@
                 <input asp-for="Health" class="form-control" />
                 <span asp-validation-for="Health" class="text-danger"></span>
             </div>
+
+            <!-- Removing the Edit Equipment section from the UI until I can get it working -->
+
+            <!--
             <div class="form-group">
-                <label asp-for="Equipment" class="control-label"></label>
-                <input asp-for="Equipment" class="form-control" />
-                <span asp-validation-for="Equipment" class="text-danger"></span>
-            </div>
+                <select class="form-control" asp-for="EquipmentID" required
+                        asp-items="@ViewBag.Equipments">
+                    <option value="">-- Select Equipment --</option>
+                </select>
+            </div> -->
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />
             </div>
+           
         </form>
     </div>
 </div>

@@ -38,7 +38,7 @@ namespace BattleOfChampions.Controllers
   
 
         // GET: Champions/ShowSearchForm
-        public async Task<IActionResult> ShowSearchForm()
+        public IActionResult ShowSearchForm()
         {
             return _context.Champion != null ?
                         View() :
@@ -56,7 +56,7 @@ namespace BattleOfChampions.Controllers
         }
 
         // GET: Champions/Battle
-        public async Task<IActionResult> Battle()
+        public IActionResult Battle()
         {
             return _context.Champion != null ?
                         View() :
@@ -120,14 +120,16 @@ namespace BattleOfChampions.Controllers
             return View(champion);
         }
 
-        // GET: Champions/Edit/5
+        // GET: Champions/Edit/
         [Authorize]
         public async Task<IActionResult> Edit(Guid? id)
         {
             if (id == null || _context.Champion == null)
             {
+                ViewBag.Equipments = await _utilities.GetEquipmentSL();
                 return NotFound();
             }
+
 
             var champion = await _context.Champion.FindAsync(id);
             if (champion == null)
@@ -144,23 +146,36 @@ namespace BattleOfChampions.Controllers
         [HttpPost]
         [ValidateAntiForgeryToken]
         // Note for later: Same thing here, add bind for Equipment
-        public async Task<IActionResult> Edit(Guid id, [Bind("ChampionID,Name,Bio,Attack,Defense,Speed,Health")] Champion champion)
+        public async Task<IActionResult> Edit(Guid id, [Bind("ChampionID,Name,Bio,Attack,Defense,Speed,Health, EquipmentID")] Champion model)
         {
-            if (id != champion.ChampionID)
+
+            ViewBag.Equipments = await _utilities.GetEquipmentSL();
+            if (id != model.ChampionID)
             {
                 return NotFound();
             }
-
+            var champion = await _context.Champion
+                .FirstOrDefaultAsync(m => m.ChampionID == id);
+            if (champion == null) 
+            {
+                return NotFound();
+            }
             if (ModelState.IsValid)
             {
                 try
                 {
+                    champion.Name = model.Name;
+                    champion.Bio = model.Bio;
+                    champion.Attack = model.Attack;
+                    champion.Defense = model.Defense;
+                    champion.Speed = model.Speed;
+                    champion.Health = model.Health;
                     _context.Update(champion);
                     await _context.SaveChangesAsync();
                 }
                 catch (DbUpdateConcurrencyException)
                 {
-                    if (!ChampionExists(champion.ChampionID))
+                    if (!ChampionExists(model.ChampionID))
                     {
                         return NotFound();
                     }
@@ -171,7 +186,7 @@ namespace BattleOfChampions.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
-            return View(champion);
+            return View(model);
         }
 
         // GET: Champions/Delete/5

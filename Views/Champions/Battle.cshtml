@@ -1,9 +1,7 @@
 ﻿@model IEnumerable<BattleOfChampions.Models.Champion>
 
-<p>
-    <a asp-action="Create">Create New Champion</a>
-</p>
-<h1> Select a Player Champion</h1>
+<h1> Battle Mode (Under Construction)</h1>
+<h4> Select a Player Champion</h4>
 <select name="player">
     <option value="">Champions</option>
     <option value="1">The Devil</option>
@@ -11,7 +9,7 @@
     <option value="3">Kali</option>
 </select>
 
-<h1> Select an Opponent Champion</h1>
+<h4> Select an Opponent Champion</h4>
 <select name="opponent">
     <option value="">Champions</option>
     <option value="1">The Devil</option>
@@ -19,7 +17,7 @@
     <option value="3">Kali</option>
 </select>
 
-<!-- This button should pop out a console window that prints lines showing the progress of the fight
+<!-- This button will eventually pop trigger a Progressive Markup box that prints lines showing the progress of the fight
     Example:
        TURN 0: Champion A has 20 health! Champion B has 20 health!
        Champion A has a higher speed and goes first
@@ -31,6 +29,36 @@
        ...
        CHAMPION B is the winner!
 -->
+<p></p>
 <div class="form-group">
     <input type="submit" value="BATTLE!" class="btn btn-primary" />
+</div>
+
+<p> <strong>↑ This button will eventually pop trigger a Progressive Markup box that prints lines showing the progress of the fight, but it isn't functional now. Check back later for updates. </strong> </p>
+<h4>  Example: </h4>
+
+<div>
+    <blockquote>
+        <p> TURN 0: Champion A has 20 health! Champion B has 20 health!</p>
+        <p> Champion A has a higher speed and goes first </p>
+        <p>
+            ...
+        </p>
+        <p>
+            TURN 1: Champion A attacks Champion B for 4 points! Champion B has 16 health!
+        </p>
+        <p>
+            TURN 2: Champion B attacks Champion A for 2 points! Champion A has 18 health!
+        </p>
+        <p>
+            TURN 3: Champion A attacks Champion B for 0 points! Champion B avoided damage!
+        </p>
+        <p>
+            TURN 4: Champion B attacks Champion A for 18 points! Champion A has 0 health!
+        </p>
+        <p>
+            ...
+        </p>
+        <p> CHAMPION B is the winner!</p>
+    </blockquote>
 </div>
